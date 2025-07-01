@@ -123,12 +123,12 @@ admin	Barcha userlar va tasklarni boshqarish huquqi
  Task egalik tekshiruvi
 
 📄 Litsenziya
-Ushbu loyiha ochiq manbali (MIT) bo‘lib, xohlagan tarzda o‘zgartirishingiz va foydalanishingiz mumkin.
+Ushbu loyiha ochiq manbali  bo‘lib, xohlagan tarzda o‘zgartirishingiz va foydalanishingiz mumkin.
 
 🤝 Muallif
 👤 Abdilaziz Usmonov
 
-📧 Gmail
+📧 Gmail abdilazizusmonov993@gmail.com
 
-🌐 GitHub: @usmonovAbdilaziz
+🌐 GitHub: https://github.com/usmonovAbdilaziz
 ```
