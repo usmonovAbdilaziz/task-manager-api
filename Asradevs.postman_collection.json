@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "52dd3d3a-6a9c-48e1-a1dd-41c2f09185b9",
+		"name": "Asradevs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34739814"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"abdilazizusmonov993@gmail.com\",\r\n  \"fullName\":\"Usmonov\",\r\n  \"password\": \"abudev98\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "forgot passsword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abdilazizusmonov993@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/auth/forgot-password"
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"abdilazizusmonov993@gmail.com\",\r\n    \"password\":\"abudev98\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTA1ODFmLWQzZTgtNDNiZi1hM2ZjLTMxNDI1MGEyYWQ5MyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUxMzI5ODkwLCJleHAiOjE3NTE0MTYyOTB9.j3E8sXtkLuKU7QMmvOLueArMnAfNEkIwEjz2XOvZiTU"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abdilazizusmonov993@gmail.com\",\r\n    \"password\":\"abdilaziz99\",\r\n    \"otp\":\"554989\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/auth/change-password"
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abdilazizusmonov993@gmail.com\"\r\n}"
+						},
+						"url": "localhost:3000/auth"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTA1ODFmLWQzZTgtNDNiZi1hM2ZjLTMxNDI1MGEyYWQ5MyIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUxMzMxODExLCJleHAiOjE3NTE0MTgyMTF9.ue3H8RTfJ7-1Xl641cxEx3jD__VCuVNUcEImXPohpwI"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/auth/5f90581f-d3e8-43bf-a3fc-314250a2ad93"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admins",
+			"item": [
+				{
+					"name": "allusers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTA1ODFmLWQzZTgtNDNiZi1hM2ZjLTMxNDI1MGEyYWQ5MyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MTQwMTA4MSwiZXhwIjoxNzUxNDg3NDgxfQ.GNZ2X8kIbRe-xD7DItVDSeWde5n4oXlz8UFtGC2vcjQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Yangi sarlavha\",\r\n  \"description\": \"Bu yangilangan task tavsifi\"\r\n}\r\n"
+						},
+						"url": "http://localhost:3000/admin/users"
+					},
+					"response": []
+				},
+				{
+					"name": "user by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTA1ODFmLWQzZTgtNDNiZi1hM2ZjLTMxNDI1MGEyYWQ5MyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MTQwMTA4MSwiZXhwIjoxNzUxNDg3NDgxfQ.GNZ2X8kIbRe-xD7DItVDSeWde5n4oXlz8UFtGC2vcjQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Yangi sarlavha\",\r\n  \"description\": \"Bu yangilangan task tavsifi\"\r\n}\r\n"
+						},
+						"url": "http://localhost:3000/admin/users/6c29d596-88c2-4cd6-b5d4-9df2fc742037"
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTA1ODFmLWQzZTgtNDNiZi1hM2ZjLTMxNDI1MGEyYWQ5MyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MTQwMTA4MSwiZXhwIjoxNzUxNDg3NDgxfQ.GNZ2X8kIbRe-xD7DItVDSeWde5n4oXlz8UFtGC2vcjQ"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"abudev99@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/admin/users/6c29d596-88c2-4cd6-b5d4-9df2fc742037"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTA1ODFmLWQzZTgtNDNiZi1hM2ZjLTMxNDI1MGEyYWQ5MyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc1MTQwMTA4MSwiZXhwIjoxNzUxNDg3NDgxfQ.GNZ2X8kIbRe-xD7DItVDSeWde5n4oXlz8UFtGC2vcjQ"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"abudev99@gmail.com\"\r\n}\r\n"
+						},
+						"url": "http://localhost:3000/admin/users/56f8de3d-bbd4-417b-899b-733ad27aeb98"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "update auth",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiYWY0YWI0LWMzODMtNGZhYy04MjU5LTU2MmY2ZjYwNDllZCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUxMzkzMzQ3LCJleHAiOjE3NTE0Nzk3NDd9.pULQtBd_1G9uHxuvm34s6o_uD1k5PomgGRTOQP6zeZ4"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \r\n    \"fullName\": \"Usmonov Abdilaziz\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/auth/me"
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiYWY0YWI0LWMzODMtNGZhYy04MjU5LTU2MmY2ZjYwNDllZCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUxMzkzMzQ3LCJleHAiOjE3NTE0Nzk3NDd9.pULQtBd_1G9uHxuvm34s6o_uD1k5PomgGRTOQP6zeZ4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/auth/me"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "create task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiYWY0YWI0LWMzODMtNGZhYy04MjU5LTU2MmY2ZjYwNDllZCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUxMzkzMzQ3LCJleHAiOjE3NTE0Nzk3NDd9.pULQtBd_1G9uHxuvm34s6o_uD1k5PomgGRTOQP6zeZ4"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Yangi sarlavha\",\r\n  \"description\": \"Bu yangilangan task tavsifi\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "all tasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiYWY0YWI0LWMzODMtNGZhYy04MjU5LTU2MmY2ZjYwNDllZCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUxMzkzMzQ3LCJleHAiOjE3NTE0Nzk3NDd9.pULQtBd_1G9uHxuvm34s6o_uD1k5PomgGRTOQP6zeZ4"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Yangi sarlavha\",\r\n  \"description\": \"Bu yangilangan task tavsifi\"\r\n}\r\n"
+						},
+						"url": "http://localhost:3000/tasks"
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiYWY0YWI0LWMzODMtNGZhYy04MjU5LTU2MmY2ZjYwNDllZCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUxMzkzMzQ3LCJleHAiOjE3NTE0Nzk3NDd9.pULQtBd_1G9uHxuvm34s6o_uD1k5PomgGRTOQP6zeZ4"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Yangi sarlavha yozishda davom etyapmiz\",\r\n  \"description\": \"Bu yangilangan task roman shaklidagi tavsifi\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/tasks/7ea78cbc-a652-4751-bca0-41a70b6e04fc"
+					},
+					"response": []
+				},
+				{
+					"name": "delete tasks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFiYWY0YWI0LWMzODMtNGZhYy04MjU5LTU2MmY2ZjYwNDllZCIsInJvbGUiOiJVU0VSIiwiaWF0IjoxNzUxMzkzMzQ3LCJleHAiOjE3NTE0Nzk3NDd9.pULQtBd_1G9uHxuvm34s6o_uD1k5PomgGRTOQP6zeZ4"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Yangi sarlavha yozishda davom etyapmiz\",\r\n  \"description\": \"Bu yangilangan task roman shaklidagi tavsifi\"\r\n}\r\n"
+						},
+						"url": "http://localhost:3000/tasks/7ea78cbc-a652-4751-bca0-41a70b6e04fc"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

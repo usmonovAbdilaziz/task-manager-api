@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const adminController = require("../controllers/admin.controller.js");
+const adminController = require("../controllers/auth.controller.js");
 const AuthGuard = require("../guards/auth.guard.js");
 const SelfGuard = require("../guards/self.guard.js");
 const OnlyGuard = require("../guards/only.guard.js");
@@ -14,7 +14,9 @@ router
   .post("/forgot-password", controller.forgotPassword)
   .post("/change-password", controller.changePassword)
   .get("/", controller.getAllUsers)
+  .get("/me", AuthGuard, controller.getMe)
   .get("/:id", AuthGuard, OnlyGuard, controller.getUserById)
+  .put("/me", AuthGuard, controller.updateMe)
   .put("/:id", AuthGuard, OnlyGuard, controller.updatedUser)
   .delete("/:id", AuthGuard, SelfGuard, controller.deleteUser);
 
